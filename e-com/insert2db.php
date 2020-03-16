@@ -28,7 +28,8 @@ include("connect.php");
 $sql = "insert into member values(NULL,'$username','$password','$name','$gender','$graduate','$sport','$music','$computer','$upload')";
 $result = mysql_query($sql);
 if($result){
-	echo "ใส่ข้อมูลลง Database เรียบร้อยแล้ว";
+	echo "<script>alert('Insert Success')</script>";
+	echo "<script>window.location.href='./query.php'</script>";
 }
 else{
 	die(mysql_error());

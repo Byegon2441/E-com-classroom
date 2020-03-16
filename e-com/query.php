@@ -2,12 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<title>Show report</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script>
+  function loadPage(){
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("insert").innerHTML = this.responseText;
+
+    }
+  };
+  xhttp.open("GET", "formRegis.php");
+  xhttp.send();
+  }
+</script>
 </head>
 
 <body>
 
-<table width="537" border="2">
+<table width="537" border="2" class="table table-hover table-dark" align="center" >
   <tr>
     <td>id_member </td>
     <td>username</td>
@@ -17,6 +32,7 @@
     <td>graduate</td>
     <td>sport|music|computer</td>
     <td>upload</td>
+     <td>update</td>
     <td>delete</td>
   </tr>
   <?php
@@ -67,6 +83,9 @@
 	<img src="<?php echo $row["upload"];?>" width="100px" height="100px"> <a/>
     </td>
     <td align="center">
+      <a href="formupdate.php?id=<?php echo $row["id_member"]?>&path=<?php echo $row["upload"]?>">แก้ไข</a>
+    </td>
+    <td align="center">
       <a href="delete.php?id=<?php echo $row["id_member"]?>&path=<?php echo $row["upload"]?>">ลบ</a>
     </td>
   </tr>
@@ -74,6 +93,7 @@
   }
   ?>
 </table>
-
+<div id='insert'></div>
+<button id="btnInsert" onclick="loadPage()" >Insert</button>
 </body>
 </html>
