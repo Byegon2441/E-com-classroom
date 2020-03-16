@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2020 at 06:04 AM
+-- Generation Time: Mar 16, 2020 at 06:04 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.5.30
 
@@ -45,7 +45,12 @@ CREATE TABLE `member` (
 
 INSERT INTO `member` (`id_member`, `username`, `password`, `name`, `gender`, `graduate`, `sport`, `music`, `computer`, `upload`) VALUES
 (4, 'Patthapong', 'Niamkerd', 'Patthapong Niamkerd', '1', '1', '1', '1', '3', 'document/29984/Screenshot (1).png'),
-(5, 'Patthapong', '', 'Patthapong Niamkerd', '1', '1', '1', '1', '3', 'document/7794/Screenshot (2).png');
+(5, 'Patthapong', '', 'Patthapong Niamkerd', '1', '1', '1', '1', '3', 'document/7794/Screenshot (2).png'),
+(6, 'Test', 'test', 'Testman', '1', '1', '', '1', '', 'document/30803/Screenshot (2).png'),
+(7, 'girl', 'girl', 'girl', '2', '2', '1', '1', '3', 'document/21570/Screenshot (1).png'),
+(8, 'Women', '55', 'Women', '2', '2', '1', '1', '3', 'document/31471/'),
+(9, 'Women', 'yy', 'Women', '2', '1', '', '1', '', 'document/7889/Screenshot (1).png'),
+(10, 'Women', '123', '123', '2', '2', '', '1', '', 'document/32054/');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +70,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
