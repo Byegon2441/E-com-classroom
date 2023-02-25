@@ -25,6 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `member`
 --
+use `my_web`
+drop table if exists `member`;
 
 CREATE TABLE `member` (
   `id_member` int(11) NOT NULL,
